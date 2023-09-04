@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TODO list</string>
+    <string name="nome_da_tarefa">Nome da Tarefa</string>
+    <string name="descricao_tarefa">Descrição</string>
+    <string name="adicionar_tarefa">Adicionar</string>
+    <string name="adicione_uma_nova_tarefa">Adicione uma nova tarefa:</string>
+</resources>
