@@ -10,12 +10,11 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 class CriacaoTarefaActivity : AppCompatActivity() {
 
-    lateinit var tarefa : EditText;
-    lateinit var descricao: EditText;
-    lateinit var btnAdd : Button
-    lateinit var tarefaEscrita : String;
-    lateinit var descricaoEscrita : String
-    lateinit var listaDeTarefas : MutableList<Tarefas>
+    private lateinit var tarefa : EditText;
+    private lateinit var descricao: EditText;
+    private lateinit var btnAdd : Button
+    private lateinit var tarefaEscrita : String;
+    private lateinit var descricaoEscrita : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -27,7 +26,7 @@ class CriacaoTarefaActivity : AppCompatActivity() {
 
     }
 
-    fun adicionaTarefa() {
+    private fun adicionaTarefa() {
 
         btnAdd.setOnClickListener() {
             tarefa = findViewById(R.id.ED_NomeTarefa)
@@ -52,7 +51,7 @@ class CriacaoTarefaActivity : AppCompatActivity() {
         }
     }
 
-    fun catchIds() {
+    private fun catchIds() {
         btnAdd = findViewById(R.id.btn_adicionar)
     }
 
