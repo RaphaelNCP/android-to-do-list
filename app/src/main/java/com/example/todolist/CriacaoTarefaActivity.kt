@@ -6,6 +6,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.todolist.dao.TasksList
 import com.example.todolist.model.Tarefas
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 class CriacaoTarefaActivity : AppCompatActivity() {
 
@@ -41,6 +42,13 @@ class CriacaoTarefaActivity : AppCompatActivity() {
             )
 
             TasksList().add(item)
+
+            SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                .setTitleText("Tarefa Adicionada")
+                .setConfirmClickListener(SweetAlertDialog.OnSweetClickListener(){
+                    finish()
+                }).show()
+
         }
     }
 
