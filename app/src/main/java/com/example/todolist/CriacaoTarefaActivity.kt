@@ -50,12 +50,7 @@ class CriacaoTarefaActivity : AppCompatActivity() {
 
         }
     }
-
     private fun catchIds() {
         btnAdd = findViewById(R.id.btn_adicionar)
     }
-
-
-
-
 }
