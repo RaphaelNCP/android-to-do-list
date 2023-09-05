@@ -35,18 +35,25 @@ class CriacaoTarefaActivity : AppCompatActivity() {
             tarefaEscrita = tarefa.text.toString()
             descricaoEscrita = descricao.text.toString()
 
-            val item = Tarefas(
-                titulo = tarefaEscrita,
-                descricao = descricaoEscrita
-            )
+            if (tarefaEscrita != ""){
 
-            TasksList().add(item)
+                val item = Tarefas(
+                    titulo = tarefaEscrita,
+                    descricao = descricaoEscrita
+                )
 
-            SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
-                .setTitleText("Tarefa Adicionada")
-                .setConfirmClickListener(SweetAlertDialog.OnSweetClickListener(){
-                    finish()
-                }).show()
+                TasksList().add(item)
+
+                SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                    .setTitleText("Tarefa Adicionada")
+                    .setConfirmClickListener(SweetAlertDialog.OnSweetClickListener(){
+                        finish()
+                    }).show()
+            }
+
+            SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                .setTitleText("Tarefa Inválida")
+                .show()
 
         }
     }
