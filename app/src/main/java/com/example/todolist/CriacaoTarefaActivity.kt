@@ -35,7 +35,7 @@ class CriacaoTarefaActivity : AppCompatActivity() {
             tarefaEscrita = tarefa.text.toString()
             descricaoEscrita = descricao.text.toString()
 
-            if (tarefaEscrita != ""){
+            if (tarefaEscrita.isNotBlank()){
 
                 val item = Tarefas(
                     titulo = tarefaEscrita,
@@ -49,11 +49,13 @@ class CriacaoTarefaActivity : AppCompatActivity() {
                     .setConfirmClickListener(SweetAlertDialog.OnSweetClickListener(){
                         finish()
                     }).show()
+            } else {
+                SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                    .setTitleText("Tarefa Inválida")
+                    .show()
+
             }
 
-            SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
-                .setTitleText("Tarefa Inválida")
-                .show()
 
         }
     }
