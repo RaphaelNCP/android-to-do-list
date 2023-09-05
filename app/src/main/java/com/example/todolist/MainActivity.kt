@@ -10,11 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todolist.adapters.AdapterTask
 import com.example.todolist.dao.TasksList
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var buttonAdd : FloatingActionButton
+    private lateinit var buttonAdd : MaterialButton
     private lateinit var rvListaDeTarefas : RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {

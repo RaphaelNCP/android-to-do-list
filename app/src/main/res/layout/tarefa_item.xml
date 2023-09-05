@@ -16,7 +16,7 @@
         android:fontFamily="@font/roboto_medium"
         android:maxLines="1"
         android:text="teste"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints"
         />
