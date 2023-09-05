@@ -13,8 +13,7 @@ class AdapterTask(private val context: Context, private val tasks: MutableList<T
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderList {
         val tasklist = LayoutInflater.from(context).inflate(R.layout.tarefa_item, parent, false)
-        val holder = ViewHolderList(tasklist)
-        return holder
+        return ViewHolderList(tasklist)
     }
 
     override fun onBindViewHolder(holder: ViewHolderList, position: Int) {
